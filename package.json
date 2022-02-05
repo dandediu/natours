@@ -1,0 +1,19 @@
+{
+  "name": "natours",
+  "version": "1.0.0",
+  "description": "CSS project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dandediu/natours.git"
+  },
+  "author": "Dan Dediu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dandediu/natours/issues"
+  },
+  "homepage": "https://github.com/dandediu/natours#readme"
+}
