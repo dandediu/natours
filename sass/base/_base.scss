@@ -1,0 +1,17 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    /* Change root font-size and define what 1rem is. */
+    font-size: 62.5%; 
+}   
+
+body {
+    padding: 3rem; /* 3rem  = 10 * 3  - root font-size: 10px declared above in html styles block  */
+    box-sizing: border-box;
+}
