@@ -1,7 +1,59 @@
 @mixin clearfix {
     &::after {
-        content: "";
+        content: '';
         clear: both;
         display: table;
+    }
+}
+
+@mixin absoluteCenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/** 
+* MEDIA QUERIES
+* 0 - 600:        PHONE
+* 600 - 900:      TABLET
+* 900 - 1200:     TABLET LANDSCAPE
+* [1200 - 1800]:  PROJECT NORMAL STYLES
+* 1800 - ++:      BIG DESKTOP
+*
+* $break-point argument choices
+* - phone
+* - tab-port
+* - tab-land
+* - big-desktop
+* 
+* 1em = 16px 
+*
+* Using "em" units gives us a better performance.
+*/
+@mixin respond($break-point) {
+    @if $break-point == phone {
+        @media (max-width: 37.5em) {
+            // 600px /16
+            @content;
+        }
+    }
+    @if $break-point == tab-port {
+        @media (max-width: 56.25em) {
+            // 900px /16
+            @content;
+        }
+    }
+    @if $break-point == tab-land {
+        @media (max-width: 75em) {
+            // 1200px /16
+            @content;
+        }
+    }
+    @if $break-point == big-desktop {
+        @media (max-width: 122.5em) {
+            // 1800px /16
+            @content;
+        }
     }
 }
