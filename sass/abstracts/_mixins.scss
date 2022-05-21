@@ -19,7 +19,7 @@
 * 600 - 900:      TABLET
 * 900 - 1200:     TABLET LANDSCAPE
 * [1200 - 1800]:  PROJECT NORMAL STYLES
-* 1800 - ++:      BIG DESKTOP
+* 1600 - ++:      BIG DESKTOP
 *
 * $break-point argument choices
 * - phone
@@ -51,8 +51,8 @@
         }
     }
     @if $break-point == big-desktop {
-        @media (max-width: 122.5em) {
-            // 1800px /16
+        @media (min-width: 100em) {
+            // 1600px /16
             @content;
         }
     }

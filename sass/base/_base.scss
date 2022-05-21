@@ -11,6 +11,7 @@ html {
     font-size: 62.5%; // 1rem = 10px, 10px / 16px = 62.5%
 
     @include respond(big-desktop) {
+        // width > 1600
         font-size: 75%; // 1rem = 12px, 12/16 = 75%
     }
 

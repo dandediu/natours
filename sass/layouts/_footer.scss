@@ -68,5 +68,9 @@
     &__copyright {
         border-top: 1px solid $color-grey-dark;
         padding-top: 2rem;
+
+        @include respond(tab-port) {
+            padding: 3rem;
+        }
     }
 }
