@@ -8,10 +8,38 @@
 
 html {
     /* Change root font-size and define what 1rem is. */
-    font-size: 62.5%; 
-}   
+    font-size: 62.5%; // 1rem = 10px, 10px / 16px = 62.5%
+
+    @include respond(big-desktop) {
+        // width > 1600
+        font-size: 75%; // 1rem = 12px, 12/16 = 75%
+    }
+
+    @include respond(tab-land) {
+        // width < 900
+        font-size: 56.5%; // 1rem = 9px, 8/16 = 50%
+    }
+
+    @include respond(tab-port) {
+        // width < 600
+        font-size: 50%; // 1 rem = 8px, 8/16 = 50%
+    }
+
+    @include respond(phone) {
+        font-size: 37%; //  1rem = 6
+    }
+}
 
 body {
     padding: 3rem; /* 3rem  = 10 * 3  - root font-size: 10px declared above in html styles block  */
     box-sizing: border-box;
+
+    @include respond(tab-port) {
+        padding: 0;
+    }
+}
+
+::selection {
+    background-color: $color-primary;
+    color: $color-white;
 }
